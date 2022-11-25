@@ -45,7 +45,7 @@ First prepare a list of languages you want to support::
 
 Also decide which locale you would like to use as default. ::
 
-    DEFAULT_LOCAL = 'en_US'
+    DEFAULT_LOCALE = 'en_US'
 
 Finally you need to decide where you want to keep the locale directory where
 translations are looked up. ::
@@ -58,7 +58,7 @@ To install the plugin and middle, you can simply pass the
     from bottle_utils.i18n import I18NPlugin
     app = bottle.default_app()
     wsgi_app = I18NPlugin(app, 
-                          languages=LANGS, 
+                          langs=LANGS, 
                           default_locale=DEFAULT_LOCALE,
                           locale_dir=LOCALES_DIR)
 
